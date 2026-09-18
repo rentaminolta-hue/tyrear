@@ -1,0 +1,19 @@
+{
+  "name": "TireCycle AR Vision AI",
+  "short_name": "TireCycle",
+  "description": "Computer-vision tire counting for recycling conveyor lines and yard piles.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#121417",
+  "theme_color": "#121417",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='24' fill='%23121417'/%3E%3Ccircle cx='96' cy='96' r='64' fill='none' stroke='%23ffb300' stroke-width='16'/%3E%3Ccircle cx='96' cy='96' r='24' fill='none' stroke='%23ffb300' stroke-width='12'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
