@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>TireCycle AR Vision AI</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#121417" />
+<link rel="stylesheet" href="css/main.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/onnxruntime-web/1.18.0/ort.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>TireCycle · AR Vision AI</h1>
+  <span id="streamStatus" class="status stopped">STOPPED</span>
+</header>
+
+<main>
+  <section class="video-panel">
+    <video id="video" muted playsinline></video>
+    <canvas id="overlay"></canvas>
+  </section>
+
+  <aside class="sidebar">
+    <div class="card">
+      <h2>Session</h2>
+      <label for="siteId">Site ID</label>
+      <input type="text" id="siteId" placeholder="e.g. YARD-04" />
+      <label for="driverId">Driver ID</label>
+      <input type="text" id="driverId" placeholder="e.g. D-112" />
+      <div class="btn-row">
+        <button id="startBtn" class="primary">Start</button>
+        <button id="stopBtn" class="danger">Stop</button>
+        <button id="yardModeBtn">Yard Estimate</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Model</h2>
+      <input type="file" id="modelInput" accept=".onnx" />
+      <p id="modelStatus" style="font-size:12px;color:var(--text-1)">No model loaded.</p>
+    </div>
+
+    <div class="card">
+      <h2>Live Count</h2>
+      <div id="totalCount" class="total-count">0</div>
+      <div id="classCounts"></div>
+    </div>
+
+    <div class="card">
+      <h2>Export</h2>
+      <div class="btn-row">
+        <button id="exportJsonBtn">Export JSON</button>
+        <button id="exportCsvBtn">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Ask the System</h2>
+      <input type="text" id="askInput" placeholder="e.g. how many truck tires so far?" />
+      <button id="askBtn">Ask</button>
+      <div id="askLog" class="ask-log"></div>
+    </div>
+  </aside>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
